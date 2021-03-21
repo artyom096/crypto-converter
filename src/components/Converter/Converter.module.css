@@ -1,0 +1,35 @@
+.position {
+	top: 15px;
+	right: 0;
+	position: sticky;
+}
+
+.root {
+	flex-grow: 1;
+	padding: 20px;
+}
+
+.paper {
+	text-align: 'center';
+}
+
+.td {
+	margin: 10px;
+}
+
+.marginWidth {
+	width: 200px;
+}
+
+.margin {
+	width: 200px;
+	margin-right: 10px;
+}
+
+.width {
+	width: 70px;
+}
+
+.img {
+	width: 25px;
+}
