@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -11,7 +11,6 @@ import { onSelectActionConverter, setSelectTwoCoin } from '../../redux/actions/c
 
 export const Converter: React.FC = () => {
 	const coins: ICoins[] = useSelector((state: any) => state.table.coins);
-
 	const value = useSelector((state: any) => state.converter.value);
 	const priceSelectedCoin = useSelector((state: any) => state.converter.priceSelectedCoin);
 	const priceTwoCoin = useSelector((state: any) => state.converter.priceTwoCoin);
@@ -20,8 +19,6 @@ export const Converter: React.FC = () => {
 	const dispatch = useDispatch();
 
 	const [input, setInput] = useState(0);
-
-	console.log(value);
 
 	const onChangeSelectTwoCoin = (eventValue: string) => {
 		dispatch(setSelectTwoCoin(eventValue, coins));
@@ -37,7 +34,7 @@ export const Converter: React.FC = () => {
 					label="Сумма"
 				/>
 			</FormControl>
-			<FormControl className={classes.marginWidth}>
+			<FormControl className={classes.margin}>
 				<InputLabel shrink id="demo-customized-select-label">
 					Валюта
 				</InputLabel>
@@ -72,7 +69,7 @@ export const Converter: React.FC = () => {
 					label="Сумма"
 				/>
 			</FormControl>
-			<FormControl className={classes.marginWidth}>
+			<FormControl className={classes.margin}>
 				<InputLabel shrink id="demo-customized-select-label">
 					Валюта
 				</InputLabel>

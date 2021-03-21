@@ -26,8 +26,6 @@ export const converterReducer = (state = initialState, action: IReducerConverter
 			});
 			let priceSelectedCoin = price[0].price.trim().slice(2);
 			priceSelectedCoin = priceSelectedCoin.replace(/\,/g, '');
-			console.log(priceSelectedCoin);
-
 			return {
 				...state,
 				value: action.payload,

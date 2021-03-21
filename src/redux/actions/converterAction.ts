@@ -34,8 +34,6 @@ export const onChangeInput = (valueNumber: ChangeEvent<HTMLInputElement>) => {
 };
 
 export const setSelectTwoCoin = (twoCoinName: string, coins: ICoins[]) => {
-	console.log(twoCoinName);
-
 	return {
 		type: SET_TWO_COIN_NAME,
 		twoCoinName,
